@@ -35,9 +35,9 @@ TFT_CLK_PIN = const(18)
 TFT_RST_PIN = const(33)
 TFT_MISO_PIN = const(19)
 
-def tone(frequency, duration=100, pin=None, volume=1):
-    if pin is None:
-        pin = Pin(SPEAKER_PIN)
+def tone(frequency, duration=100, pin=SPEAKER_PIN, volume=1):
+    # if pin is None:
+    #     pin = Pin(SPEAKER_PIN)
 
     pwm = PWM(pin, duty=volume % 50)
     pwm.freq(frequency)
