@@ -61,7 +61,7 @@ class ButtonC(DigitalInput):
 
 class Display(object):
 
-    def __init__(self, spiSpeed=20000000):
+    def __init__(self, spiSpeed=26000000):
         self.tft = self.create()
 
     def __getattr__(self, name):
